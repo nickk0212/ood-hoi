@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="a novel text-driven 3D human-object interaction method for Out-of-Domain generation">
+  <meta name="keywords" content="Out-of-Domain, HOI, text-driven">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>OOD-HOI</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -37,7 +37,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/figs/icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -56,36 +56,37 @@
           <h1 class="title is-1 publication-title">OOD-HOI: Text-Driven 3D Whole-Body Human-Object Interactions Generation Beyond Training Domains</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="#">Yixuan Zhang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://svitass.github.io/">Hui Yang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://dblp.org/pid/230/7767.html">Chuanchen Luo</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://scholar.google.com.hk/citations?user=xut8w_MAAAAJ&hl=en">Junran Peng</a><sup>5</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=waLCodcAAAAJ">Yuxi Wang</a><sup>1✉</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://scholar.google.com/citations?user=qxWfV6cAAAAJ">Zhaoxiang Zhang</a><sup>1,2,3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Centre for Artificial Intelligence and Robotics, HKISI, CAS</span>
+            <span class="author-block"><sup>2</sup>Institute of Automation, Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>3</sup>University of Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>4</sup>Shandong University</span>
+            <span class="author-block"><sup>5</sup>University of Science and Technology Beijing</span>
+            <span class="eql-cntrb"><small><br><sup>✉</sup> Corresponding author.</small></span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -94,7 +95,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -104,7 +105,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -114,7 +115,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -124,13 +125,14 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
                   </a>
+              </span>
             </div>
 
           </div>
@@ -244,7 +246,7 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Geometry deformation results.</h2>
+          <h2 class="title is-3">Geometry deformation results</h2>
         </div>
       </div>
     </div>
@@ -258,7 +260,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Origin</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/airplane.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/airplane.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -268,7 +270,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 1</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/airplane_01.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/airplane_01.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -278,7 +280,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 2</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/airplane_02.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/airplane_02.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -288,7 +290,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 3</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/airplane_03.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/airplane_03.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -304,7 +306,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Origin</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/alarmclock.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/alarmclock.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -314,7 +316,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 1</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/alarmclock_01.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/alarmclock_01.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -324,7 +326,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 2</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/alarmclock_02.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/alarmclock_02.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -334,7 +336,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 3</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/alarmclock_03.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/alarmclock_03.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -349,7 +351,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Origin</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/binoculars.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/binoculars.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -359,7 +361,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 1</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/binoculars_01.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/binoculars_01.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -369,7 +371,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 2</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/binoculars_02.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/binoculars_02.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -379,7 +381,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deformation 3</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/objects_glb/binoculars_03.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_objects_glb/binoculars_03.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -405,7 +407,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Hand flashlight with left hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/offhand_flashlight_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/offhand_flashlight_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -415,7 +417,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Pass apple with right hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/pass_apple_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/pass_apple_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -425,7 +427,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Toast mug with right hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/toast_mug_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/toast_mug_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -435,7 +437,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Take picture camera with both hands.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/takepicture_camera_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/takepicture_camera_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -448,7 +450,7 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Text-OOD results.</h2>
+          <h2 class="title is-3">Text-OOD results</h2>
         </div>
       </div>
     </div>
@@ -460,7 +462,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Deliver duck with right hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/ood_deliver_duck_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/ood_deliver_duck_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -470,7 +472,7 @@
       <div class="columns is-centered">
         <div class="column content">
           <h2 class="title is-4">Elevate toothpaste with right hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/ood_elevate_toothpaste_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/ood_elevate_toothpaste_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
@@ -484,7 +486,7 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Object-OOD results.</h2>
+          <h2 class="title is-3">Object-OOD results</h2>
         </div>
       </div>
     </div>
@@ -495,53 +497,55 @@
     <div class="column is-2">
       <div class="columns is-centered">
         <div class="column content">
+          <h2 class="title is-4">Pick scissors with right hand.</h2>
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/ood_pick_scissors_full_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-4">Pick scissors with right hand.</h2>
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/ood_pick_scissors_full_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h2 class="title is-4">Pick scissors with right hand.</h2>
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/ood_pick_scissors_full_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          </model-viewer>
+        </div>
+      </div>
+    </div>
+       <div class="column is-2">
+      <div class="columns is-centered">
+        <div class="column content">
           <h2 class="title is-4">Lift bottle with right hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/ood_lift_bottle_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+          <model-viewer bounds="tight" enable-pan="" src="static/results/color_glb/ood_lift_bottle_full.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
           </model-viewer>
         </div>
       </div>
     </div>
 
-    <div class="column is-2">
-      <div class="columns is-centered">
-        <div class="column content">
-          <h2 class="title is-4">Pick scissors with right hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/ood_pick_scissors_full_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
-          </model-viewer>
-        </div>
-      </div>
-    </div>
 
-    <div class="column is-2">
-      <div class="columns is-centered">
-        <div class="column content">
-          <h2 class="title is-4">Pick scissors with right hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/ood_pick_scissors_full_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
-          </model-viewer>
-        </div>
-      </div>
-    </div>
 
-    <div class="column is-2">
-      <div class="columns is-centered">
-        <div class="column content">
-          <h2 class="title is-4">Pick scissors with right hand.</h2>
-          <model-viewer bounds="tight" enable-pan="" src="static/results/glb/ood_pick_scissors_full_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
-          </model-viewer>
-        </div>
-      </div>
-    </div>
   </div>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+    <pre><code>@article{zhang2024oodhoi,
+  author    = {Zhang, Yixuan and Yang, Hui and Luo, Chuanchen and Peng, Junran and Wang, Yuxi and Zhang, Zhaoxiang},
   title     = {OOD-HOI: Text-Driven 3D Whole-Body Human-Object Interactions Generation Beyond Training Domain},
-  journal   = {ICCV},
-  year      = {2021},
+  journal   = {arxiv preprint arxiv:xxxx },
+  year      = {2024},
 }</code></pre>
   </div>
 </section>
